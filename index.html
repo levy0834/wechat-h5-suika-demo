@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no"
+    />
+    <meta name="theme-color" content="#f97316" />
+    <title>合成大西瓜 Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel">
+        <header class="hero">
+          <div>
+            <p class="badge">微信 H5 Demo</p>
+            <h1>合成大西瓜</h1>
+            <p class="subtitle">拖动上方准星，松手丢下水果。两个同样的碰到一起就会合成更大的。</p>
+          </div>
+          <div class="score-box">
+            <span>分数</span>
+            <strong id="score">0</strong>
+          </div>
+        </header>
+
+        <section class="preview-row">
+          <div class="preview-card">
+            <span class="small-label">当前水果</span>
+            <div id="currentFruit" class="fruit-preview"></div>
+          </div>
+          <div class="preview-card">
+            <span class="small-label">下一个</span>
+            <div id="nextFruit" class="fruit-preview"></div>
+          </div>
+        </section>
+
+        <section class="game-wrap">
+          <canvas id="game" width="420" height="720" aria-label="合成大西瓜游戏画布"></canvas>
+          <div class="top-guide" id="topGuide"></div>
+          <div class="overlay" id="overlay">
+            <div class="overlay-card">
+              <p class="badge">上头预警 🍉</p>
+              <h2 id="overlayTitle">开始游戏</h2>
+              <p id="overlayText">拖动屏幕上方的准星，松手就会掉下水果。越合越大，越玩越停不下来。</p>
+              <button id="startBtn" class="primary-btn">开整</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="actions">
+          <button id="restartBtn" class="ghost-btn">重新开始</button>
+        </section>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
