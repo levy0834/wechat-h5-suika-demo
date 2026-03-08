@@ -184,7 +184,7 @@ function updatePhysics() {
         b.vx += nx * push;
         b.vy += ny * push;
 
-        if (a.type === b.type && a.type < fruitDefs.length - 1 && dist < minDist * 0.72) {
+        if (a.type === b.type && a.type < fruitDefs.length - 1) {
           a.merged = true;
           b.merged = true;
           const newType = a.type + 1;
