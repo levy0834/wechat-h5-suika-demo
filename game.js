@@ -167,22 +167,25 @@ function updatePhysics() {
       const dy = b.y - a.y;
       const dist = Math.hypot(dx, dy) || 0.001;
       const minDist = ra + rb;
+      const mergeDist = minDist + 8;
 
-      if (dist < minDist) {
-        const overlap = minDist - dist;
+      if (dist < mergeDist) {
+        const overlap = Math.max(0, minDist - dist);
         const nx = dx / dist;
         const ny = dy / dist;
 
-        a.x -= nx * overlap * 0.5;
-        a.y -= ny * overlap * 0.5;
-        b.x += nx * overlap * 0.5;
-        b.y += ny * overlap * 0.5;
+        if (overlap > 0) {
+          a.x -= nx * overlap * 0.5;
+          a.y -= ny * overlap * 0.5;
+          b.x += nx * overlap * 0.5;
+          b.y += ny * overlap * 0.5;
 
-        const push = 0.08;
-        a.vx -= nx * push;
-        a.vy -= ny * push;
-        b.vx += nx * push;
-        b.vy += ny * push;
+          const push = 0.08;
+          a.vx -= nx * push;
+          a.vy -= ny * push;
+          b.vx += nx * push;
+          b.vy += ny * push;
+        }
 
         if (a.type === b.type && a.type < fruitDefs.length - 1) {
           a.merged = true;
