@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <radialGradient id="cherryBody" cx="34%" cy="30%" r="70%">
+      <stop offset="0" stop-color="#ff7a7a"/>
+      <stop offset="0.62" stop-color="#ef4444"/>
+      <stop offset="1" stop-color="#b91c1c"/>
+    </radialGradient>
+  </defs>
+  <rect width="256" height="256" fill="#0000"/>
+  <path d="M126 95c12-18 21-32 36-39 15-7 25-3 34 5" fill="none" stroke="#7c3f12" stroke-width="10" stroke-linecap="round"/>
+  <path d="M126 95c-11-18-18-32-29-39-11-7-19-6-26-1" fill="none" stroke="#7c3f12" stroke-width="10" stroke-linecap="round"/>
+  <path d="M165 48c13-16 31-18 45-8" fill="none" stroke="#2f8f3e" stroke-width="12" stroke-linecap="round"/>
+  <ellipse cx="96" cy="160" rx="58" ry="61" fill="url(#cherryBody)"/>
+  <ellipse cx="160" cy="162" rx="58" ry="61" fill="url(#cherryBody)"/>
+  <ellipse cx="77" cy="133" rx="16" ry="11" fill="#ffd2d2" opacity="0.6"/>
+  <ellipse cx="139" cy="135" rx="16" ry="11" fill="#ffd2d2" opacity="0.6"/>
+</svg>

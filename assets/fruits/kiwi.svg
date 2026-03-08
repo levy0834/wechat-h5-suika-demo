@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <radialGradient id="kiwiSkin" cx="40%" cy="28%" r="72%">
+      <stop offset="0" stop-color="#b07c4f"/>
+      <stop offset="1" stop-color="#7c4a22"/>
+    </radialGradient>
+    <radialGradient id="kiwiFlesh" cx="44%" cy="34%" r="62%">
+      <stop offset="0" stop-color="#dcf995"/>
+      <stop offset="0.62" stop-color="#84cc16"/>
+      <stop offset="1" stop-color="#4d7c0f"/>
+    </radialGradient>
+  </defs>
+  <rect width="256" height="256" fill="#0000"/>
+  <circle cx="128" cy="128" r="112" fill="url(#kiwiSkin)"/>
+  <circle cx="128" cy="128" r="92" fill="url(#kiwiFlesh)"/>
+  <circle cx="128" cy="128" r="34" fill="#f7f5cf"/>
+  <g fill="#1f2937">
+    <ellipse cx="128" cy="70" rx="5" ry="8"/>
+    <ellipse cx="154" cy="77" rx="5" ry="8" transform="rotate(28 154 77)"/>
+    <ellipse cx="176" cy="96" rx="5" ry="8" transform="rotate(55 176 96)"/>
+    <ellipse cx="186" cy="124" rx="5" ry="8" transform="rotate(85 186 124)"/>
+    <ellipse cx="181" cy="152" rx="5" ry="8" transform="rotate(110 181 152)"/>
+    <ellipse cx="163" cy="176" rx="5" ry="8" transform="rotate(140 163 176)"/>
+    <ellipse cx="136" cy="188" rx="5" ry="8" transform="rotate(170 136 188)"/>
+    <ellipse cx="106" cy="185" rx="5" ry="8" transform="rotate(200 106 185)"/>
+    <ellipse cx="81" cy="169" rx="5" ry="8" transform="rotate(226 81 169)"/>
+    <ellipse cx="67" cy="143" rx="5" ry="8" transform="rotate(250 67 143)"/>
+    <ellipse cx="66" cy="114" rx="5" ry="8" transform="rotate(280 66 114)"/>
+    <ellipse cx="77" cy="88" rx="5" ry="8" transform="rotate(310 77 88)"/>
+    <ellipse cx="99" cy="72" rx="5" ry="8" transform="rotate(336 99 72)"/>
+  </g>
+  <ellipse cx="98" cy="82" rx="22" ry="14" fill="#f2ffd7" opacity="0.45"/>
+</svg>

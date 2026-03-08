@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <radialGradient id="coconutBody" cx="37%" cy="28%" r="74%">
+      <stop offset="0" stop-color="#d4a373"/>
+      <stop offset="0.58" stop-color="#a16207"/>
+      <stop offset="1" stop-color="#6b3f15"/>
+    </radialGradient>
+  </defs>
+  <rect width="256" height="256" fill="#0000"/>
+  <circle cx="128" cy="128" r="112" fill="url(#coconutBody)"/>
+  <circle cx="128" cy="128" r="103" fill="none" stroke="#8a5520" stroke-width="10" opacity="0.5"/>
+  <g stroke="#7c4a1c" stroke-width="6" stroke-linecap="round" opacity="0.55">
+    <path d="M74 92c24 7 49 12 76 12"/>
+    <path d="M64 126c39 12 79 15 120 10"/>
+    <path d="M74 160c32 7 64 8 98 2"/>
+  </g>
+  <g fill="#5b3617" opacity="0.75">
+    <circle cx="104" cy="108" r="9"/>
+    <circle cx="129" cy="101" r="8"/>
+    <circle cx="121" cy="126" r="8"/>
+  </g>
+  <ellipse cx="90" cy="86" rx="28" ry="17" fill="#f0d8ba" opacity="0.28"/>
+</svg>

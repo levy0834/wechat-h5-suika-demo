@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <radialGradient id="orangeBody" cx="32%" cy="28%" r="72%">
+      <stop offset="0" stop-color="#ffd08a"/>
+      <stop offset="0.58" stop-color="#fb923c"/>
+      <stop offset="1" stop-color="#ea580c"/>
+    </radialGradient>
+  </defs>
+  <rect width="256" height="256" fill="#0000"/>
+  <circle cx="128" cy="128" r="112" fill="url(#orangeBody)"/>
+  <circle cx="128" cy="128" r="96" fill="none" stroke="#f97316" stroke-width="12" opacity="0.35"/>
+  <g fill="#fbbf24" opacity="0.28">
+    <circle cx="79" cy="98" r="9"/>
+    <circle cx="108" cy="74" r="8"/>
+    <circle cx="162" cy="88" r="10"/>
+    <circle cx="182" cy="134" r="9"/>
+    <circle cx="152" cy="166" r="8"/>
+    <circle cx="98" cy="162" r="10"/>
+    <circle cx="69" cy="141" r="7"/>
+  </g>
+  <ellipse cx="92" cy="86" rx="30" ry="20" fill="#fff2cc" opacity="0.44"/>
+  <ellipse cx="128" cy="24" rx="15" ry="8" fill="#2f8f3e"/>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <radialGradient id="lemonBody" cx="35%" cy="28%" r="74%">
+      <stop offset="0" stop-color="#fff7a6"/>
+      <stop offset="0.58" stop-color="#fde047"/>
+      <stop offset="1" stop-color="#eab308"/>
+    </radialGradient>
+  </defs>
+  <rect width="256" height="256" fill="#0000"/>
+  <path d="M34 130c0-55 41-95 94-95 53 0 94 40 94 95s-41 95-94 95c-53 0-94-40-94-95z" fill="url(#lemonBody)"/>
+  <path d="M44 130c0-47 36-81 84-81s84 34 84 81-36 81-84 81-84-34-84-81z" fill="none" stroke="#facc15" stroke-width="12" opacity="0.4"/>
+  <ellipse cx="92" cy="86" rx="28" ry="16" fill="#fffde8" opacity="0.54"/>
+  <g fill="#f7d22d" opacity="0.35">
+    <circle cx="88" cy="130" r="7"/>
+    <circle cx="124" cy="112" r="6"/>
+    <circle cx="156" cy="138" r="7"/>
+    <circle cx="136" cy="164" r="6"/>
+    <circle cx="102" cy="162" r="6"/>
+  </g>
+</svg>

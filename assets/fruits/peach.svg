@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <radialGradient id="peachBody" cx="40%" cy="25%" r="74%">
+      <stop offset="0" stop-color="#ffd1d9"/>
+      <stop offset="0.55" stop-color="#fb7185"/>
+      <stop offset="1" stop-color="#e11d48"/>
+    </radialGradient>
+  </defs>
+  <rect width="256" height="256" fill="#0000"/>
+  <path d="M128 32c-44 0-92 31-92 96 0 58 40 100 92 100s92-42 92-100c0-65-48-96-92-96z" fill="url(#peachBody)"/>
+  <path d="M128 43c-11 14-16 31-16 48 0 21 5 38 12 57 8 23 8 50 4 70" fill="none" stroke="#c81e5b" stroke-width="10" stroke-linecap="round" opacity="0.4"/>
+  <ellipse cx="88" cy="88" rx="30" ry="20" fill="#ffe4ea" opacity="0.5"/>
+  <path d="M128 26c16-23 45-26 62-10-21 10-32 21-43 39" fill="#4d9a2a"/>
+  <path d="M130 38c-4-12 2-24 14-30" fill="none" stroke="#7c3f12" stroke-width="7" stroke-linecap="round"/>
+</svg>

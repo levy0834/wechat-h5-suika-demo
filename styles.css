@@ -107,7 +107,11 @@ body {
   height: 52px;
   margin: 0 auto;
   border-radius: 50%;
-  box-shadow: inset -8px -8px 14px rgba(0,0,0,0.08), inset 10px 10px 16px rgba(255,255,255,0.3);
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.72);
+  box-shadow: 0 8px 18px rgba(124, 45, 18, 0.18), inset 0 0 0 1px rgba(124, 45, 18, 0.08);
+  background-size: cover;
+  background-position: center;
 }
 
 .game-wrap {
