@@ -15,6 +15,14 @@ const HEIGHT = canvas.height;
 const DROP_Y = 86;
 const WALL = 20;
 const TOP_LINE = 128;
+const GRAVITY = 0.3;
+const AIR_DRAG = 0.985;
+const GROUND_FRICTION = 0.9;
+const BOUNCE = -0.08;
+const WALL_BOUNCE = -0.22;
+const PUSH_FORCE = 0.045;
+const REST_THRESHOLD_X = 0.08;
+const REST_THRESHOLD_Y = 0.12;
 
 const fruitDefs = [
   { name: '樱桃', radius: 18, color: '#ef4444', score: 2 },
@@ -70,7 +78,6 @@ function resetGame() {
 }
 
 function spawnFruit(type, x) {
-  const def = fruitDefs[type];
   fruits.push({
     id: `${Date.now()}-${Math.random()}`,
     type,
@@ -125,6 +132,11 @@ function drawFruit(fruit) {
   ctx.restore();
 }
 
+function settleFruit(fruit) {
+  if (Math.abs(fruit.vx) < REST_THRESHOLD_X) fruit.vx = 0;
+  if (Math.abs(fruit.vy) < REST_THRESHOLD_Y) fruit.vy = 0;
+}
+
 function updatePhysics() {
   if (!running || gameOver) return;
 
@@ -132,26 +144,26 @@ function updatePhysics() {
 
   for (const fruit of fruits) {
     const def = fruitDefs[fruit.type];
-    fruit.vy += 0.34;
+    fruit.vy += GRAVITY;
     fruit.y += fruit.vy;
     fruit.x += fruit.vx;
-    fruit.vx *= 0.992;
+    fruit.vx *= AIR_DRAG;
 
     if (fruit.x - def.radius < WALL) {
       fruit.x = WALL + def.radius;
-      fruit.vx *= -0.45;
+      fruit.vx *= WALL_BOUNCE;
     }
     if (fruit.x + def.radius > WIDTH - WALL) {
       fruit.x = WIDTH - WALL - def.radius;
-      fruit.vx *= -0.45;
+      fruit.vx *= WALL_BOUNCE;
     }
 
     const floor = HEIGHT - 18 - def.radius;
     if (fruit.y > floor) {
       fruit.y = floor;
-      fruit.vy *= -0.18;
-      fruit.vx *= 0.98;
-      if (Math.abs(fruit.vy) < 0.45) fruit.vy = 0;
+      fruit.vy *= BOUNCE;
+      fruit.vx *= GROUND_FRICTION;
+      settleFruit(fruit);
     }
   }
 
@@ -180,11 +192,13 @@ function updatePhysics() {
           b.x += nx * overlap * 0.5;
           b.y += ny * overlap * 0.5;
 
-          const push = 0.08;
-          a.vx -= nx * push;
-          a.vy -= ny * push;
-          b.vx += nx * push;
-          b.vy += ny * push;
+          a.vx -= nx * PUSH_FORCE;
+          a.vy -= ny * PUSH_FORCE;
+          b.vx += nx * PUSH_FORCE;
+          b.vy += ny * PUSH_FORCE;
+
+          settleFruit(a);
+          settleFruit(b);
         }
 
         if (a.type === b.type && a.type < fruitDefs.length - 1) {
@@ -214,8 +228,8 @@ function spawnMergedFruit(type, x, y) {
     type,
     x,
     y,
-    vx: (Math.random() - 0.5) * 1.6,
-    vy: -1.8,
+    vx: (Math.random() - 0.5) * 0.9,
+    vy: -1.2,
     merged: false,
   });
 }
